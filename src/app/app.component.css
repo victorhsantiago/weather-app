@@ -7,9 +7,16 @@
     position: relative;
 }
 
-/* header */
+/*
+  ================
+      Header
+  ================
+  */
 
-/* slide menu */
+/*
+      Slide Menu
+  = = = = = = = = =
+  */
 
 .side-menu__container {
     position: fixed;
@@ -35,7 +42,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #0c1066;
+    background-color: black;
     opacity: 0;
     transition: opacity 300ms linear;
     will-change: opacity;
@@ -55,8 +62,8 @@
     height: 100%;
     width: 90%;
     max-width: 26rem;
-    background-color: #fff;
-    box-shadow: 0 0 2em rgba(0, 0, 255, 0.1);
+    background-color: white;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 4fr 1fr;
@@ -70,7 +77,7 @@
 }
 
 .menu-header {
-    background: linear-gradient(to right, #646881, #62BEC1);
+    background: linear-gradient(to right, #23395B, #8EA8C3);
     display: grid;
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 4fr;
@@ -78,8 +85,8 @@
     box-sizing: border-box;
     width: 100%;
     align-content: center;
-    color: #fff;
-    box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2)
+    color: white;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .greeting__text {
@@ -102,12 +109,12 @@
 
 .name__text {
     font-size: 1.15rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 .email__text {
     font-size: 0.9rem;
-    list-style-position: 0.1rem;
+    letter-spacing: 0.1rem;
 }
 
 .menu-body {
@@ -125,33 +132,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: white;
     align-self: center;
     margin-left: 2rem;
 }
 
 .profile__image {
-    width: 100%;
+    max-width: 4rem;
 }
 
-/* header */
+/*Header*/
 
 .main__header {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 0.25fr;
-    grid-auto-rows: 1fr;
-    box-shadow: 0 0 2em rgba(0, 0, 255, 0.1);
+    grid-template-rows: 1fr;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
     height: 4rem;
     margin: 0;
     align-items: center;
     transition: background-color 500ms linear;
-    animation: 1s ease-in-out 0ms 1 fadein;
+    animation: fadein 1s ease-in-out 0ms 1;
 }
 
 .main__header-dark {
-    background-color: #2b244d;
-    color: #fff;
+    background-color: #2B244D;
+    color: white;
 }
 
 .toggle-button__container {
@@ -171,28 +178,28 @@
     border-radius: 0.5rem;
     background-color: rgba(0, 0, 0, 0.5);
     display: inline-block;
-    transition: background-color 300ms linear
+    transition: background-color 300ms linear;
 }
 
 .mode-toggle__circle {
-    height: 1.3rem;
-    width: 1.3rem;
-    background-color: #2b244d;
+    height: 1.30rem;
+    width: 1.30rem;
+    background-color: #2B244D;
     position: absolute;
     top: -0.2rem;
     border-radius: 50%;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 255, 0.5);
+    box-shadow: 0 0 0 rgba(0, 0, 255, 0.5);
     transition: left 300ms linear;
     left: 0.1rem;
 }
 
 .mode-toggle__circle-checked {
-    background-color: #fff;
+    background-color: white;
     left: 1.75rem;
 }
 
 .mode-toggle__bg-checked {
-    background-color: #ff0070;
+    background-color: #FF0070;
 }
 
 .mode-toggle__text {
@@ -201,13 +208,13 @@
     letter-spacing: 0.1rem;
 }
 
-/* content */
+/*Content*/
 
-.left-section {
+.left__section {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    min-width: 5rem;
+    max-width: 5rem;
 }
 
 .date__text {
@@ -217,7 +224,7 @@
     margin: 0.5rem 0;
 }
 
-/* SVGs */
+/*SVGs*/
 
 .hamburger__icon {
     position: relative;
@@ -234,22 +241,26 @@
 }
 
 .logo__text {
-    fill: #2b244d;
+    fill: #2B244D;
 }
 
 .logo__text-dark {
-    fill: #fff;
+    fill: #ffff;
 }
 
 .hamburger__icon__fill {
-    fill: #2b244d;
+    fill: #2B244D;
 }
 
-.hamburger__icon__fill-darks {
-    fill: #fff;
+.hamburger__icon__fill-dark {
+    fill: #ffff;
 }
 
-/* body */
+/*
+  ================
+      Body
+  ================
+  */
 
 .main-container__bg {
     height: 100%;
@@ -259,7 +270,7 @@
     left: 0;
     z-index: -2;
     opacity: 0;
-    background: #fff;
+    background: white;
     transition: opacity 300ms linear;
 }
 
@@ -269,7 +280,11 @@
     transition: opacity 300ms linear;
 }
 
-/* footer */
+/*
+  ================-
+      Footer
+  ================
+  */
 
 .main__footer {
     background: transparent;
@@ -281,10 +296,10 @@
 
 .copyright__text {
     letter-spacing: 0.1rem;
-    color: white
+    color: white;
 }
 
-@media only screen and (max-widht:300px) {
+@media only screen and (max-width: 300px) {
     .slide-menu {
         width: 100%;
     }
