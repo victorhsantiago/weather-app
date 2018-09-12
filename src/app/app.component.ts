@@ -13,7 +13,6 @@ export class AppComponent {
   title = "weather-app";
   darkModeActive: boolean;
   showMenu = false;
-  city: string;
 
   ngOnInit() {
     this.ui.darkModeState.subscribe(value => {
@@ -29,9 +28,9 @@ export class AppComponent {
     this.ui.darkModeState.next(!this.darkModeActive);
   }
 
-  submitSearch(city) {
-    this.city = city;
-    this.weather.getForecast(this.city);
-    this.weather.getCityWeatherByName(this.city);
+  submitSearch(city: string) {
+    this.weather.getForecast(city);
+    this.weather.getCityWeatherByName(city);
+    console.log(this.weather.getCurrenteTemp(city));
   }
 }

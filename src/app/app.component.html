@@ -53,7 +53,7 @@
 		<!-- search field -->
 		<div class="search__container">
 			<input #city type="text" class="input" placeholder="Insert a city..." />
-			<button class="button" (click)="submitSearch(city.value); city.value='London'">Search</button>
+			<button class="button" (click)="submitSearch(city.value); city.value=''">Search</button>
 		</div>
 
 		<!-- toggle dark/light mode -->
@@ -79,10 +79,4 @@
 		<div class="main-container__bg" [ngClass]="{'main-container__bg-dark': darkModeActive}"></div>
 		<router-outlet></router-outlet>
 	</main>
-
-	<!-- Footer -->
-
-	<footer class="main__footer">
-		<small class="copyright__text">Copyright © 2018 Minimus</small>
-	</footer>
 </div>
