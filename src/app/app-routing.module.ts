@@ -5,7 +5,8 @@ import { DetailsComponent } from "./pages/details/details.component";
 import { AddCardComponent } from "./ui/add-card/add-card.component";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  // { path: "", component: HomeComponent },
+  { path: "", component: DetailsComponent },
   { path: "details/:city", component: DetailsComponent }
   // { path: "add", component: AddComponent },
   // { path: "login", component: LoginComponent },

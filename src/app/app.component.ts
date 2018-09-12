@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { UiService } from "./services/ui/ui.service";
+import { WeatherService } from "./services/weather/weather.service";
 
 @Component({
   selector: "app-root",
@@ -7,9 +8,12 @@ import { UiService } from "./services/ui/ui.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor(public ui: UiService) {}
+  constructor(public ui: UiService, public weather: WeatherService) {}
 
   title = "weather-app";
+  darkModeActive: boolean;
+  showMenu = false;
+  city: string;
 
   ngOnInit() {
     this.ui.darkModeState.subscribe(value => {
@@ -17,13 +21,17 @@ export class AppComponent {
     });
   }
 
-  showMenu = false;
   toggleMenu() {
     this.showMenu = !this.showMenu;
   }
 
-  darkModeActive: boolean;
   modeToggleSwitch() {
     this.ui.darkModeState.next(!this.darkModeActive);
+  }
+
+  submitSearch(city) {
+    this.city = city;
+    this.weather.getForecast(this.city);
+    this.weather.getCityWeatherByName(this.city);
   }
 }

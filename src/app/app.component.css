@@ -146,9 +146,9 @@
 .main__header {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.25fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     height: 4rem;
     margin: 0;
     align-items: center;
@@ -158,13 +158,18 @@
 
 .main__header-dark {
     background-color: #2B244D;
-    color: white;
+    color: #fff;
 }
 
 .toggle-button__container {
     cursor: pointer;
     position: relative;
     margin: 0 0.5rem;
+}
+
+.mode-toggle__container {
+    justify-self: right;
+    margin-right: 2rem;
 }
 
 .mode-toggle__input {
@@ -188,7 +193,7 @@
     position: absolute;
     top: -0.2rem;
     border-radius: 50%;
-    box-shadow: 0 0 0 rgba(0, 0, 255, 0.5);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
     transition: left 300ms linear;
     left: 0.1rem;
 }
@@ -217,11 +222,35 @@
     max-width: 5rem;
 }
 
-.date__text {
+.search__container {
+    width: 100%;
+    justify-items: center;
+}
+
+.input {
+    background: transparent;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    display: inline;
-    margin: 0.5rem 0;
+    border: none;
+    border-bottom: 1px gray solid;
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    display: inline-flex;
+    width: 75%;
+}
+
+.button {
+    color: gray;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    transition: 750ms;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: rgba(0, 0, 0, 0.15);
 }
 
 /*SVGs*/
