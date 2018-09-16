@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, SimpleChanges } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { WeatherService } from "../../services/weather/weather.service";
+import { UiService } from '../../services/ui/ui.service';
 
 @Component({
 	selector: "app-details",
@@ -8,6 +9,12 @@ import { WeatherService } from "../../services/weather/weather.service";
 	styleUrls: ["./details.component.css"]
 })
 export class DetailsComponent {
+	constructor(
+		public activeRouter: ActivatedRoute,
+		public weather: WeatherService,
+		public ui: UiService
+	) { }
+
 	@Input() city: string;
 
 	state: string;
@@ -37,15 +44,19 @@ export class DetailsComponent {
 	day5State: string;
 	day5Temp: number;
 
+	@Input() darkModeActive;
+	showMenu = false;
+
+	ngOnInit() {
+		this.ui.darkModeState.subscribe(value => {
+			this.darkModeActive = value;
+		});
+	}
+
 	ngOnChanges(changes: SimpleChanges): void {
 		console.log(changes)
 		this.getWeather()
 	}
-
-	constructor(
-		public activeRouter: ActivatedRoute,
-		public weather: WeatherService
-	) { }
 
 	getWeather() {
 		if (!this.city) return;
@@ -115,5 +126,9 @@ export class DetailsComponent {
 				}
 			}
 		});
+	}
+
+	modeToggleSwitch() {
+		this.ui.darkModeState.next(!this.darkModeActive);
 	}
 }
