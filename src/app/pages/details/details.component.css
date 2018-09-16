@@ -1,5 +1,5 @@
-.details-page__wrapper-dark {
-    background: linear-gradient(#FC7DB8, #495CFC);
+.details-page__wrapper {
+    background: linear-gradient(#fff, #CBF7ED);
     height: 100%;
     width: 100%;
     display: flex;
@@ -7,6 +7,11 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+}
+
+.details-page__wrapper-dark {
+    background: linear-gradient(#23395B, #161925);
+    transition: opacity 300ms linear;
 }
 
 .background-gradient__circle {

@@ -183,7 +183,6 @@
     border-radius: 0.5rem;
     background-color: rgba(0, 0, 0, 0.5);
     display: inline-block;
-    transition: background-color 300ms linear;
 }
 
 .mode-toggle__circle {
@@ -191,7 +190,7 @@
     width: 1.30rem;
     background-color: #2B244D;
     position: absolute;
-    top: -0.2rem;
+    top: -0.25rem;
     border-radius: 50%;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
     transition: left 300ms linear;
@@ -237,6 +236,7 @@
     margin: 0.5rem auto;
     display: inline-flex;
     width: 75%;
+    color: gray
 }
 
 .button {
@@ -298,15 +298,11 @@
     top: 0;
     left: 0;
     z-index: -2;
-    opacity: 0;
-    background: white;
-    transition: opacity 300ms linear;
 }
 
 .main-container__bg-dark {
     opacity: 1;
     background: linear-gradient(to bottom, #B290FF, #2E1D65);
-    transition: opacity 300ms linear;
 }
 
 /*

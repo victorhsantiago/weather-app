@@ -1,13 +1,4 @@
-<div class="details-page__wrapper-dark">
-	<svg class="background-gradient__circle" viewBox="4572 73 1328 1328">
-		<defs>
-			<linearGradient id="ddd" x2="0" y2="1" gradientUnits="objectBoundingBox">
-				<stop offset="0" stop-color="#ff8b8b" />
-				<stop offset="1" stop-color="#6676ff" />
-			</linearGradient>
-		</defs>
-		<circle cx="664" cy="664" r="664" fill="url(#ddd)" transform="translate(4572 73)" />
-	</svg>
+<div class="details-page__wrapper" [ngClass]="{'details-page__wrapper-dark': darkModeActive}">
 
 	<!-- <svg class="back__button" routerLink="" viewBox="4085 152 98.5 126">
 		<defs>
@@ -52,7 +43,6 @@
 	<section class="main-weather__card-dark">
 		<section class="card-header__container-dark" [ngSwitch]="true">
 
-
 			<svg *ngSwitchDefault viewBox="4302 163 1218 406">
 				<defs>
 					<style>
@@ -61,8 +51,8 @@
 						}
 					</style>
 					<linearGradient id="aa" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-						<stop offset="0" stop-color="#000075" />
-						<stop offset="1" stop-color="#ff8c8c" />
+						<stop offset="0" stop-color="#23395B" />
+						<stop offset="1" stop-color="#406E8E" />
 					</linearGradient>
 				</defs>
 				<path class="aa" fill="url(#aa)" d="M20,0H1198a20,20,0,0,1,20,20V406a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V20A20,20,0,0,1,20,0Z"
@@ -87,7 +77,7 @@
 
 						<div class="wind__container">
 							<span class="wind__text">wind</span>
-							<span class="wind-value__text">{{wind}} K/M</span>
+							<span class="wind-value__text">{{wind}} Km/h</span>
 						</div>
 					</div>
 				</div>
